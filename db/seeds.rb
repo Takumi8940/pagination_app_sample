@@ -5,4 +5,8 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-Post.create(:body =)
+50.times do |i|
+    Post.create!(
+      body: "投稿_#{i + 1}",
+    )
+    end
