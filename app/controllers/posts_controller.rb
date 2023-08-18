@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
+  #ページネーションの上限数
+  PER_PAGE = 10
+  
   def index
-    PER_PAGE = 10
     @posts = Post.order(created_at: :desc).page(params[:page]).per(PER_PAGE)
     @post = Post.new
   end
